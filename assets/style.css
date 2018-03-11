@@ -2,7 +2,6 @@ body{
     background-image: url('./images/TrainTrack.jpg');
     background-repeat: repeat;
 }
-
 .jumbo-styling {
     background-image: url('./images/PassingTrain.jpg');
     background-size: 100% 100%;
@@ -10,7 +9,6 @@ body{
     font-family: 'Faster One', cursive;
     text-align: center;
 }
-
 #TopPanel {
     background-color: #D7B441;
     color: white;

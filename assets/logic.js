@@ -29,13 +29,10 @@ var trainInfo = {
    var diffTime;
    var remainingTime;
 
-// Displays the date and time on the screen
-
    setInterval(function(){
      $("#currentDAndT").text(moment().format('MMMM Do YYYY, hh:mm:ss a'));}
      ,1000);
 
-  // on submit adds value to trainInfo obj properties
    $("#trainAddForm").on("submit", function (event) {
     event.preventDefault();
      console.log(trainInfo.nextTrainMin, "this works");
@@ -43,7 +40,7 @@ var trainInfo = {
     trainInfo.destination = $("#trainDestination").val().trim();
     trainInfo.firstTrain = $("#firstTrainTime").val().trim();
     trainInfo.frequency = $("#trainFrequency").val().trim();
-    
+    /* Moment.js doesn't seem to work. */
     firstTrainConverted = moment(trainInfo.firstTrain, "hh:mm").subtract(1, "years");
     
     currentTime = moment();
@@ -53,7 +50,7 @@ var trainInfo = {
     remainingTime = diffTime % trainInfo.frequency;
     trainInfo.nextTrainMin = trainInfo.frequency - remainingTime;
     
-    if (trainInfo.nextTrainTime < trainInfo.firstTrain) { //need to compare these two using unix time (if smaller then display first train time)
+    if (trainInfo.nextTrainTime < trainInfo.firstTrain) {
        trainInfo.nextTrainTime = trainInfo.firstTrain;
     } else {
       trainInfo.nextTrainTime = moment().add(trainInfo.nextTrainMin, "minutes").format("hh:mm");
