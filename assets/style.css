@@ -1,9 +1,6 @@
-.body-styling{
-    background-image: url(https://img0.etsystatic.com/025/0/7777347/il_570xN.639196360_rct5.jpg);
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: content-box;
+body{
+    background-image: url('./images/TrainTrack.jpg');
+    background-repeat: repeat;
 }
 
 .jumbo-styling {
