@@ -6,15 +6,16 @@ body{
 .jumbo-styling {
     background-image: url('./images/PassingTrain.jpg');
     background-size: 100% 100%;
-    color: black;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    color: white;
+    font-family: 'Faster One', cursive;
+    text-align: center;
 }
 
-#panel-heading-top-style {
-    background-color: #bd3e43;
+#TopPanel {
+    background-color: #D7B441;
     color: white;
 }
-#panel-heading-bottom-style {
-    background-color: rgb(41, 41, 222);
+#BottomPanel {
+    background-color: #515460;
     color: white;
 }
